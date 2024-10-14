@@ -1,0 +1,44 @@
+.about{
+	height: 100vh;
+	padding-top:80px;
+	padding-left: 46px;
+	padding-right: 46px;
+	background-color: lightyellow;
+}
+
+.about__container{
+}
+.about__bloc__text{
+}
+.about__intituled{
+	font-size: 10rem;
+}
+.img__me {
+    width: 30%;
+    height: 30%;
+    position: relative;
+    top: -8px;
+    left: -128px;
+    background: aliceblue;
+}
+
+.about__me{
+}
+.about__text{
+}
+.why__amI__developer{
+	padding-top: 40px;
+}
+
+
+.about__education{
+	height: 200vh;
+	padding-top: 60px;
+	padding-left: 46px;
+	padding-right: 46px;
+	background-color: floralwhite;
+}
+
+.education__intituled{
+	font-size: 90px;
+}

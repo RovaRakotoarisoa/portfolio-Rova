@@ -1,0 +1,47 @@
+/*==================font===========================*/
+@font-face{
+    font-family: Catamaran;
+    src: url("../fonts/Catamaran/Catamaran-VariableFont_wght.ttf");
+}
+@font-face{
+    font-family: Montserrat;
+    src: url("../fonts/montserrat/Montserrat-VariableFont_wght.ttf");
+}
+@font-face{
+    font-family: Poppins;
+    src: url("../fonts/Poppins/Poppins-Black.ttf");
+}
+@font-face{
+    font-family: Roboto_Slab;
+    src: url("../fonts/roboto_slab/RobotoSlab-VariableFont_wght.ttf");
+}
+
+/*==================Default===========================*/
+*{
+	font-family: Roboto_Slab;
+}
+
+:root {
+    --bg-color: #131313;
+    --second-bg-color: #313131;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+/*    background: var(--bg-color);*/
+
+}
+
+ul li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+}
+/*hr{
+    margin-top:5px;
+}*/

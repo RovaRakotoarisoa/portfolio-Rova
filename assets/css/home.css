@@ -1,0 +1,25 @@
+#home {
+    height: 100vh;
+    padding-left: 46px;
+    padding-top: 80px;
+}
+.home{
+	background-color: azure;
+}
+.home__intituled {
+	background-color: white;
+    padding-top: 80px;
+}
+.spec__1, .spec__2{
+	font-size: 6rem;
+	font-weight: 900;
+}
+.rounded__1 {
+    position: absolute;
+    bottom: -20px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background-color: #212529;
+    border-radius: 300px;
+}
