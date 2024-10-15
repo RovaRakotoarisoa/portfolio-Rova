@@ -32,7 +32,7 @@
 
 
 .about__education{
-	height: 200vh;
+	height: 100vh;
 	padding-top: 60px;
 	padding-left: 46px;
 	padding-right: 46px;
@@ -40,5 +40,5 @@
 }
 
 .education__intituled{
-	font-size: 90px;
+	font-size: 10px;
 }
