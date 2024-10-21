@@ -1,0 +1,66 @@
+.work{
+	height: 100vh;
+	width: 100%;
+	padding-top: 80px;
+	padding-left: 46px;
+	padding-right: 46px;
+	background-color: brown;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.preview{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	pointer-events: none;
+	transform-origin: center;
+/*	transform: scale(0);*/
+	z-index: 3;
+}
+
+.preview__img{
+	width: 100%;
+	height: 100%;
+	background: url(../../Inspiration/Work.png);
+	background-size: cover;
+	background-position: 0 0;
+	pointer-events: none;
+}
+.paragraphe{
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 100%;
+}
+
+#heade p{
+	opacity: 0.5;
+}
+.containe {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.projects{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+.project{
+	width: 100%;
+	padding: 1.5em 1em;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	cursor: pointer;
+}
+.project > div{
+	flex: 3;
+} 
+.project div:last-child {
+	flex: 1;
+}
