@@ -1,9 +1,8 @@
 .contact{
 	height: 100vh;
 	padding-top: 70px;
-	padding-left: 46px;
+	padding-left: 80px;
 	padding-right: 46px;
-	background-color: lightyellow;
 }
 
 label {
@@ -11,17 +10,30 @@ label {
     font-size: 1rem;
 }
 
-input, textarea, button {
+input, textarea, button.btn.btn-primary {
     padding: 0.75rem;
     border: 1px solid;
     border-radius: 5px;
     font-size: 1rem;
-    width: 350px;
+    width: 400px;
+}
+button.btn.btn-primary {
+	width: 100px;
+	border-radius: 100px;
+	background-color: #3a3c3e;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
+}
+input, textarea{
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-radius: 0;
+	border-color: rgba(0, 0, 0, 0.125);
+	resize: none;
 }
 
 button.btn.btn-primary {

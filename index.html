@@ -11,18 +11,25 @@
 	<link rel="stylesheet" href="assets/css/about.css">
 	<link rel="stylesheet" href="assets/css/work.css">
 	<link rel="stylesheet" href="assets/css/contact.css">
+
+	<script src="assets/js/gsap.min.js"></script>
 </head>
 <body>
 	<!-- ZE H1 REETRA ATAO FONT SIZE GLADY B DAOLY-->
+	<!-- ==================== MENU DESIGN ============================-->
 	<header class="header">
 		<div class="header__container">
 			<div class="header__menu d-flex justify-content-between">
 				<p class="header__name">Rova-RAKOTOARISOA</p>
 				<menu class="menu my-0">
-					<div id="menu__icon" class="menu__icon" onclick="toggleMenu()">
-						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#607D8B" d="M6 22H42V26H6zM6 10H42V14H6zM6 34H42V38H6z"/></svg>
-					</div>
-					<nav id="menu__nav" class="menu__nav" onclick="toggleMenu()">
+					<button id="menu__icon" class="burger menu__icon" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));toggleMenu()" aria-label="Main Menu">
+						<svg width="60" height="60" viewBox="0 0 100 100">
+							<path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+							<path class="line line2" d="M 20,50 H 80" />
+							<path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+						</svg>
+					</button>
+					<nav id="menu__nav" class="menu__nav">
 						<div class="menu__nav__box">
 							<div class="menu__nav__link d-flex gap-4">
 								<div class="menu__link"><a href="#home" class="menu__home">HOME</a></div>
@@ -43,8 +50,8 @@
 						</div>
 						<div class="header__location">
 							<div class="location">Located Tanjombato</div>
-							<div class="date"><!-- Date at present in function date-->Ex: 2 janvier 2024</div>
-							<div class="Time"><!-- Time at present in function Time-->15:17</div>
+							<div class="date"><!--Date at present in function date-->Ex: 2 janvier 2024</div>
+							<div class="Time">15:17</div>
 						</div>
 					</nav>	
 				</menu>
@@ -73,50 +80,48 @@
 								 J'ai un intérêt pour le monde des nouvelles technologies et de la science-fiction. C'est ce qui m'a amené à être passionné par le développement web en matière de design et applicatif.de développement pationner du design du culture japonnais de l'edm de la physique et ayant pour centre d'interet pour le basket
 						</p>
 					</div>
+					<!-- <div class="col-6">
+						<div class="rounded__cercle"></div>
+					</div> -->
 				</div>
 			</div>
 		</section>
 		<section class="formation d-flex justify-content-center align-items-center">
-			<div class="formation__container row pt-5">
-				<div class="col-6">
-					<p class="formation__intituled">Formation</p>
+			<div class="formation__container d-flex flex-column align-items-center justify-content-center">
+				<div class="col-6 px-4 py-0">
+					<p class="formation__intituled">FORMATION</p>
 				</div>
-				<div class="col-6">
-					<div class="pt-5">
-						<h6>Sept - Nov 2023</h6>
-						<h6>Trainee | Developper</h6>
-						<h6>At HOMI Soavinandriana</h6>
-						<div class="experience_task">
-							<p>
-								Création d’une application de gestion de patient.Création d’une interface plus pratique pour accélérer la réception des patients.Rendre une communication plus fluide entre différent service Rendre un accès plus restreint pour chaque utilisateur
-							</p>
-						</div>
-						<span class="languages">
-							<span>Javascript</span>
-							<span>PHP</span>
-							<span>Laravel</span>
-							<span>Tailwind</span>
-							<span>HTML & CSS</span>
-						</span>
+				<div class="col-6 p-4">
+					<h6>Sept - Nov 2023</h6>
+					<h5>Trainee | Developper At HOMI Soavinandriana</h5>
+					<div class="experience_task">
+						<p>
+							Création d’une application de gestion de patient.Création d’une interface plus pratique pour accélérer la réception des patients.<br> Rendre une communication plus fluide entre différent service.<br> Rendre un accès plus restreint pour chaque utilisateur.
+						</p>
 					</div>
-					<div class="pt-5">
-						<h6>Oct - Dec 2022</h6>
-						<h6>Trainee | Integrator</h6>
-						<h6>At Randev@Team Andavamamba</h6>
-						<div class="experience_task">
-							<p>
-								Optimisation conviviale de site web.Implémentation responsive design.
-								Mise à jour visuelle.Correction des bugs.Rendre une communication plus fluide entre différent service Rendre un accès plus restreint pour chaque utilisateur.
-							</p>
-						</div>
-						<span class="languages">
-							<span>Javascript</span>
-							<span>PHP</span>
-							<span>Prestashop</span>
-							<span>Bootstrap</span>
-							<span>HTML & CSS</span>
-						</span>
+					<span class="languages">
+						<span>Javascript</span>
+						<span>PHP</span>
+						<span>Laravel</span>
+						<span>Tailwind</span>
+						<span>HTML & CSS</span>
+					</span>
+				</div>
+				<div class="col-6 p-4">
+					<h6>Oct - Dec 2022</h6>
+					<h5>Trainee | Integrator At Randev@Team Andavamamba</h5>
+					<div class="experience_task">
+						<p>
+							Optimisation conviviale de site web. Mise à jour visuelle.<br> Implémentation responsive design. Correction des bugs. Rendre une communication plus fluide entre différent service. sRendre un accès plus restreint pour chaque utilisateur.
+						</p>
 					</div>
+					<span class="languages">
+						<span>Javascript</span>
+						<span>PHP</span>
+						<span>Prestashop</span>
+						<span>Bootstrap</span>
+						<span>HTML & CSS</span>
+					</span>
 				</div>
 			</div>
 		</section>
@@ -139,147 +144,95 @@
 				</div>
 			</div>
 		</section>
-
-	<!-- 	<section id="about__formation" class="about__formation">
-			<div class="education__container">
-				<div class="client-list">
-			        	<div class="tete">FORMATION</div>
-			        	<div class="tete">ETABLISSEMENT</div>
-			        	<div class="tete">LOCATION</div>
-			        	<div class="tete">DATE</div>
-
-		        		<div class="formation">Chainn</div>
-		        		<div class="etablissement">The Netherlands</div>
-		        		<div class="location">Interaction & Development</div>
-		        		<div class="date">2022</div>
-
-		        		<div class="formation">Atypikal</div>
-		        		<div class="etablissement">United States</div>
-		        		<div class="location">Interaction & Development</div>
-		        		<div class="date">2021</div>
-
-		        		<div class="formation">MicDrop Agency</div>
-		        		<div class="etablissement">United States</div>
-		        		<div class="location">Interaction & Development</div>
-		        		<div class="date">2021</div>
-		    	</div>
-		    </div>
-		</section> 
-	-->
 		<section id="work" class="work">
-			<!-- <h1 class="work__intituled">WORK</h1>
-			<div class="preview">
-				<div class="preview__img"></div>
-			</div> -->
 			<div class="preview">
 				<div class="preview__img"></div>
 			</div>
 			<div class="containe">
 				<div class="projects">
+					<h1 class="work__intituled">WORK</h1>
 					<div class="project" id="heade">
 						<div class="client">
 							<p class="paragraphe">Project</p>
 						</div>
-						<div class="location">
-							<p class="paragraphe">Made</p>
-						</div>
 						<div class="service">
 							<p class="paragraphe">Service</p>
 						</div>
-						<div class="year">
-							<p class="paragraphe">Year</p>
-						</div>
 					</div>
 					<div class="project" id="p1">
+						<!-- <div class="project_p">
+							<img src="assets/img/calculator.png" class="project_img">
+						</div> -->
 						<div class="client">
 							<p class="paragraphe">Portfolio</p>
 						</div>
-						<div class="location">
-							<p class="paragraphe">Personnaly</p>
-						</div>
 						<div class="service">
 							<p class="paragraphe">Interaction & Design</p>
-						</div>
-						<div class="year">
-							<p class="paragraphe">2024</p>
 						</div>
 					</div>
 					<div class="project" id="p2">
 						<div class="client">
 							<p class="paragraphe">Dimasport</p>
 						</div>
-						<div class="location">
-							<p class="paragraphe">At Randev@Team</p>
-						</div>
 						<div class="service">
 							<p class="paragraphe">Integration & Responsive Design</p>
-						</div>
-						<div class="year">
-							<p class="paragraphe">2022</p>
 						</div>
 					</div>
 					<div class="project" id="p3">
 						<div class="client">
 							<p class="paragraphe">Calculator</p>
 						</div>
-						<div class="location">
-							<p class="paragraphe">Personnaly</p>
-						</div>
 						<div class="service">
 							<p class="paragraphe">Development & Design</p>
-						</div>
-						<div class="year">
-							<p class="paragraphe">2024</p>
 						</div>
 					</div>
 					<div class="project" id="p4">
 						<div class="client">
 							<p class="paragraphe">Tic Tac Toe</p>
 						</div>
-						<div class="location">
-							<p class="paragraphe">Personnaly</p>
-						</div>
 						<div class="service">
 							<p class="paragraphe">Development</p>
-						</div>
-						<div class="year">
-							<p class="paragraphe">2024</p>
 						</div>
 					</div>
 					<div class="project" id="p5">
 						<div class="client">
 							<p class="paragraphe">Weather App</p>
 						</div>
-						<div class="location">
-							<p class="paragraphe">Personnaly</p>
-						</div>
 						<div class="service">
 							<p class="paragraphe">Development & Design</p>
 						</div>
-						<div class="year">
-							<p class="paragraphe">2024</p>
+					</div>
+					<div class="project" id="p6">
+						<div class="client">
+							<p class="paragraphe">Dice roll</p>
+						</div>
+						<div class="service">
+							<p class="paragraphe">Development </p>
+						</div>
+					</div>
+					<div class="project" id="p7">
+						<div class="client">
+							<p class="paragraphe">Image rotator</p>
+						</div>
+						<div class="service">
+							<p class="paragraphe">Development </p>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<!--Project | Made | Service | Year
-			Made : Personnaly or at entrprise -->
 		</section>
 
-
-
 		<section id="contact" class="contact">
-			<div class="contact__container d-flex flex-column align-items-center">
-				<h1 class="contact__intituled">CONTACT ME</h1>
-				<form action="#" method="POST" class="row py-3 d-flex flex-column align-items-start gap-4">
-						<div class="col-6 d-flex flex-column align-items-start gap-4">
-								<label for="email">Email :</label>
-								<input type="email" name="email" required>
-								<label for="message">Message :</label>
-								<textarea id="message" name="message" rows="5" required></textarea>
-								<button type="submit" class="btn btn-primary">Send Message</button>
-						</div>
+			<div class="contact__container d-flex flex-column">
+				<h1 class="contact__intituled">LET'S CREATE WEBSITE</h1>
+				<form action="#" method="POST" class="row py-4 d-flex">
+					<div class="col-6 pt-2 d-flex flex-column align-items-center gap-4">
+							<input type="text" name="name" placeholder="Your name*" required>
+							<input type="email" name="email" placeholder="Your email*" required>
+							<textarea id="message" name="message" rows="5" placeholder="Your message*" required></textarea>
+							<button type="submit" class="btn btn-primary align-self-end">Send it</button>
+					</div>
+					<div class="col-6 bg-primary"></div>
 				</form>
 				
 			</div>
@@ -301,6 +254,8 @@
 	</main>
 	
 	<script type="text/javascript" src="assets/js/menu.js"></script>
+	<script type="text/javascript" src="assets/js/scrollreveal.min.js"></script>
+	<script src="assets/js/about.js"></script>
     <script src="assets/js/work.js"></script>
 </body>
 </html>

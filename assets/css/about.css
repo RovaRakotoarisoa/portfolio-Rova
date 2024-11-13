@@ -3,7 +3,6 @@
 	padding-top:80px;
 	padding-left: 46px;
 	padding-right: 46px;
-	background-color: lightyellow;
 }
 
 .about__container{
@@ -19,7 +18,7 @@
     position: relative;
     top: -8px;
     left: -128px;
-    background: aliceblue;
+    background-color: white;
 }
 
 .about__me{
@@ -30,16 +29,39 @@
 	padding-top: 40px;
 }
 
+.rounded__cercle{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 100px;
+}
+
 .formation{
     height: 100vh;
-    padding-top: 0px;
+    padding-top: 40px;
     padding-left: 46px;
     padding-right: 76px;
-    background-color: cornflowerblue;
 }
 
 .formation__intituled{
-    font-size: 90px;
+    font-size: 2.5rem;
+}
+
+.languages > span{
+    padding: 10px;
+    border-radius: 20px;
+    color: #ffffffa1;
+}
+
+.languages > span:not(:first-child){
+    margin: 2px;
+}
+
+.languages span{
+    background-color: #212528;
 }
 
 .education{
@@ -47,7 +69,6 @@
 	padding-top: 0px;
 	padding-left: 46px;
 	padding-right: 76px;
-	background-color: floralwhite;
 }
 
 .education__intituled{

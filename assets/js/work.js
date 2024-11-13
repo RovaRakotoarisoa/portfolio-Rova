@@ -2,7 +2,7 @@ const projects = document.querySelector(".projects");
 const preview = document.querySelector(".preview");
 const previewImg = document.querySelector(".preview__img");
 
-let inside = false;
+let isInside = false;
 
 const bgPositions = {
 	p1: "0 0",
@@ -41,7 +41,7 @@ const moveProject = (e) => {
 const moveProjectImg = (project) => {
 	const projectId = project.id;
 	gsap.to(previewImg, 0.4, {
-		backgroundPosition: bgPositions[projectId] || "0 0",
+		backgroundPosition: bgPositions[projectId] || "0 0 !important",
 	});
 };
 
@@ -60,4 +60,4 @@ window.addEventListener("mousemove", moveStuff);
 Array.from(projects.children).forEach((project)=>{
 	project.addEventListener("mousemove",moveProject);
 	project.addEventListener("mousemove", moveProjectImg.bind(null,project));
-});
+}); 
