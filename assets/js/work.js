@@ -1,63 +1,90 @@
-const projects = document.querySelector(".projects");
-const preview = document.querySelector(".preview");
-const previewImg = document.querySelector(".preview__img");
+// const projects = document.querySelector(".projects");
+// const preview = document.querySelector(".preview");
+// const previewImg = document.querySelector(".preview__img");
 
-let isInside = false;
+// let isInside = false;
 
-const bgPositions = {
-	p1: "0 0",
-	p2: "0 25%",
-	p3: "0 50%",
-	p4: "0 75%",
-	p5: "0 100%"
-};
+// const bgPositions = {
+// 	p1: "0 0",
+// 	p2: "0 25%",
+// 	p3: "0 50%",
+// 	p4: "0 75%",
+// 	p5: "0 100%"
+// };
 
-const moveStuff = (e) =>{
-	const mouseInside = isMouseInsideContainer(e);
+// const moveStuff = (e) =>{
+// 	const mouseInside = isMouseInsideContainer(e);
 
-	if (mouseInside !== isInside) {
-		isInside = mouseInside;
-		if (isInside) {
-			gsap.to(preview, 0.3, {
-				scale: 1,
-			});
-		} else{
-			gsap.to(preview, 0.3,{
-				scale: 0,
-			});
-		}
-	}
-};
+// 	if (mouseInside !== isInside) {
+// 		isInside = mouseInside;
+// 		if (isInside) {
+// 			gsap.to(preview, 0.3, {
+// 				scale: 1,
+// 			});
+// 		} else{
+// 			gsap.to(preview, 0.3,{
+// 				scale: 0,
+// 			});
+// 		}
+// 	}
+// };
 
-const moveProject = (e) => {
-	const previewRect = preview.getBoundingClientRect();
-	const offsetX = previewRect.width / 2;
-	const offsetY = previewRect.height / 2;
+// const moveProject = (e) => {
+// 	const previewRect = preview.getBoundingClientRect();
+// 	const offsetX = previewRect.width / 2;
+// 	const offsetY = previewRect.height / 2;
 
-	preview.style.left = e.pageX - offsetX + "px";
-	preview.style.top = e.pageY - offsetY + "px";
-};
+// 	preview.style.left = e.pageX - offsetX + "px";
+// 	preview.style.top = e.pageY - offsetY + "px";
+// };
 
-const moveProjectImg = (project) => {
-	const projectId = project.id;
-	gsap.to(previewImg, 0.4, {
-		backgroundPosition: bgPositions[projectId] || "0 0 !important",
-	});
-};
+// const moveProjectImg = (project) => {
+// 	const projectId = project.id;
+// 	gsap.to(previewImg, 0.4, {
+// 		backgroundPosition: bgPositions[projectId] || "0 0 !important",
+// 	});
+// };
 
-const isMouseInsideContainer = (e) => {
-	const containerRect = projects.getBoundingClientRect();
-	return(
-		e.pageX >= containerRect.left &&
-		e.pageX <= containerRect.right &&
-		e.pageY >= containerRect.top &&
-		e.pageY <= containerRect.bottom
-	);
-};
+// const isMouseInsideContainer = (e) => {
+// 	const containerRect = projects.getBoundingClientRect();
+// 	return(
+// 		e.pageX >= containerRect.left &&
+// 		e.pageX <= containerRect.right &&
+// 		e.pageY >= containerRect.top &&
+// 		e.pageY <= containerRect.bottom
+// 	);
+// };
 
-window.addEventListener("mousemove", moveStuff);
+// window.addEventListener("mousemove", moveStuff);
 
-Array.from(projects.children).forEach((project)=>{
-	project.addEventListener("mousemove",moveProject);
-	project.addEventListener("mousemove", moveProjectImg.bind(null,project));
-}); 
+// Array.from(projects.children).forEach((project)=>{
+// 	project.addEventListener("mousemove",moveProject);
+// 	project.addEventListener("mousemove", moveProjectImg.bind(null,project));
+// }); 
+
+document.querySelectorAll('.project').forEach(project => {
+  const image = project.querySelector('.project-img');
+
+  // Lorsque la souris entre dans le projet
+  project.addEventListener('mouseenter', () => {
+    image.style.opacity = 1; // Rendre l'image visible au survol
+    // image.style.height = 250 +"px"
+
+  });
+
+  // Lorsque la souris quitte le projet
+  project.addEventListener('mouseleave', () => {
+    image.style.opacity = 0; // Cacher l'image quand on quitte le projet
+    // image.style.height = 50 +"px"
+  });
+
+  // Déplacement de l'image avec le curseur
+  project.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX/2; // Position horizontale de la souris
+    const mouseY = e.clientY/-10; // Position verticale de la souris
+
+    // Appliquer la position exacte du curseur à l'image
+    image.style.left = `${mouseX}px`; // L'image suit exactement la souris horizontalement
+    image.style.top = `${mouseY}px`;  // L'image suit exactement la souris verticalement
+  });
+});

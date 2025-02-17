@@ -5,6 +5,10 @@
 	padding-right: 46px;
 }
 
+.contact__intituled{
+	text-align: center;
+}
+
 label {
     display: inline-block;
     font-size: 1rem;
@@ -21,6 +25,9 @@ button.btn.btn-primary {
 	width: 100px;
 	border-radius: 100px;
 	background-color: #3a3c3e;
+}
+button.btn.btn-primary.align-self-start {
+    margin-left: 80px;
 }
 
 input:focus,
